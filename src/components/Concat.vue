@@ -51,7 +51,7 @@ export default {
         padding:5px;
         box-sizing: border-box;
         background: #fff;
-        top:-115px;
+        top:-100px;
         transform:rotateX(-90deg);  
         transform-origin: center bottom;
         transition: 500ms;
@@ -71,7 +71,7 @@ export default {
           height:0;
           box-sizing: border-box;
           border:10px solid;
-          border-color:#ff0000 transparent  transparent transparent;
+          border-color:#fff transparent  transparent transparent;
         }
       }
       a{
