@@ -87,7 +87,7 @@ export default {
       }
       &.disabled{
         color:@gray;
-        cursor: text;
+        cursor:text;
       }
       &.active{
         color:@primary
