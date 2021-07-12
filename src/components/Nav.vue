@@ -1,38 +1,10 @@
 <template>
   <ul class="nav-container">
-    <li class="active">
-      <a>
-       <Icon type="zhuye"/>
-        Duyi-Edu
-      </a>
-     
-    </li>
-     <li>
-      <a>
-       <Icon type="zhuye"/>
-        Duyi-Edu
-      </a>
-     
-    </li>
-     <li>
-      <a>
-       <Icon type="zhuye"/>
-        Duyi-Edu
-      </a>
-     
-    </li>
-     <li>
-      <a>
-       <Icon type="zhuye"/>
-        Duyi-Edu
-      </a>
-     
-    </li>
-     <li>
-      <a>
-       <Icon type="zhuye"/>
-        Duyi-Edu
-      </a>
+    <li class="active" v-for="item in menu" :key="item.src">
+      <router-link :to="item.src" exact>
+       <Icon :type="item.icon"/>
+        {{item.text}}
+      </router-link>
      
     </li>
   </ul>
@@ -43,6 +15,27 @@ import Icon from './Icon.vue'
 export default {
   components:{
     Icon,
+  },
+  data(){
+    return {
+      menu:[
+        {
+          icon:"zhuye",
+          text:"首页",
+          src:"/"
+        },
+        {
+          icon:"notification",
+          text:"我的blog",
+          src:"/blog"
+        },
+        {
+          icon:"setting",
+          text:"设置",
+          src:"/setting"
+        }
+      ]
+    }
   }
 }
 </script>
@@ -56,16 +49,8 @@ export default {
     li{
       height:40px;
       line-height: 40px;
-    
-      &.active{
-       background: @gray;
-        a{
-            color:#fff;
-            
-         }
-      }
       box-sizing: border-box;
-      padding-left:40px;
+    
       position: relative;
         &:hover{
            background: @gray;
@@ -74,11 +59,16 @@ export default {
             
          }
          
-        }
-     
+        }  
       a{
         display: block;
         cursor: pointer;
+        padding-left:40px;
+        &.router-link-active{
+        background: @gray;
+        color:#fff;
+        
+        }
       }
     }
     .iconfont{

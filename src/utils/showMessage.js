@@ -9,7 +9,6 @@ import styles from '@/styles/message.module.less'
  * @param {*} container 容器,提示框于哪个容器内显示
  */
 export default function(content,type='zhuye',duration,container){
-    
     let div = document.createElement("div")
     var container = container?container:document.body
     var iconHtml = getComponentRenderDom(Icon,{type}).outerHTML

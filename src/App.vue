@@ -7,17 +7,14 @@
       </template>
 
       <template v-slot:main>
+
+        <router-view />
         <button @click="handleClick">click</button>
         <div class="message-box"  ref="message">
          
         </div>
       </template>
-    </Layout>
-    <!-- <Avatar :size="50" url="https://wpimg.wallstcn.com/69a1c46c-eb1c-4b46-8bd4-e9e686ef5251.png"/>
-    <Icon type='camera'/>
-     <Icon type='zhuye'/>
-     <Pagenation @changePage = "handleChangePage" :total="403" :current="current"/> -->
-      
+    </Layout> 
   </div>
 </template>
 
@@ -57,7 +54,7 @@ export default {
   },
   methods:{
     handleClick(){
-      message("验证通过！","zhuye" ,2000,this.$refs.message)
+      message("验证通过！","success" ,2000,this.$refs.message)
     }
   }
 }

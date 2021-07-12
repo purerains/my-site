@@ -7,7 +7,15 @@ const iconMap = {
   zhuye:'icon-zhuye',
   camera:"icon-camera",
   saoyisao:"icon-saoyisao",
-  search:"icon-sousuo"
+  search:"icon-sousuo",
+  error:"icon-error",
+  info:"icon-prompt",
+  success:"icon-success",
+  warn:"icon-warning",
+  explain:"icon-explain",
+  notification:"icon-notification",
+  setting:"icon-setting",
+  telephone:"icon-telephone"
 }
 export default {
   props:{
@@ -25,5 +33,8 @@ export default {
 </script>
 
 <style scoped>
-@import "//at.alicdn.com/t/font_799112_d113buu1jmv.css";
+@import "//at.alicdn.com/t/font_799112_x0qi5huz0ik.css";
+.iconfont-container{
+  font-size: inherit;
+}
 </style>

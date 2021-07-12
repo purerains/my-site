@@ -1,12 +1,12 @@
 <template>
   <ul class="concat-container">
-    <li v-for="i in 5" :key="i">
+    <li v-for="i in concatData" :key="i.icon">
       <a>
-       <Icon type="zhuye"/>
-        Duyi-Edu
+       <Icon :type="i.icon"/>
+        {{i.text}}
       </a>
       <div class="pop">
-        <img src="./../assets/logo.png" alt="">
+        <img src="./../assets/erweima.png" alt="">
       </div>
     </li>
   </ul>
@@ -17,6 +17,20 @@ import Icon from './Icon.vue'
 export default {
   components:{
     Icon,
+  },
+  data(){
+    return {
+      concatData:[
+        {
+          icon:"telephone",
+          text:'电话'
+        },
+        {
+          icon:"camera",
+          text:'扫一扫'
+        }
+      ]
+    }
   }
 }
 </script>
