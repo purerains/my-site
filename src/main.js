@@ -3,6 +3,7 @@ import App from './App.vue'
 import './styles/global.less'
 
 import router from './router/index.js'
+import './api'
 
 console.log({router})
 new Vue({
